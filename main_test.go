@@ -10,6 +10,6 @@ func TestGenerateName(t *testing.T) {
 	ok := strings.Contains(name, ".mp3")
 	if !ok {
 		t.Fail()
-		t.Log("nama bukan termasuk file.mp3 suffix")
+		t.Log("harus berformat.mp3")
 	}
 }
