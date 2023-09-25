@@ -7,6 +7,6 @@ steps:
         go test -v ./...
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t',
-            'gcr.io/imre-build-test/text-to-speech-demo:$SHORT_SHA', '.' ]
+            'gcr.io/eco-lane-378504/github.com/robifirmnsyah/text-to-speech:$SHORT_SHA', '.' ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/imre-build-test/text-to-speech-demo:$SHORT_SHA']
+    args: ['push', 'gcr.io/eco-lane-378504/github.com/robifirmnsyah/text-to-speech:$SHORT_SHA']
