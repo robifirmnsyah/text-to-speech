@@ -10,7 +10,6 @@ steps:
             'gcr.io/eco-lane-378504/github.com/robifirmnsyah/text-to-speech:$SHORT_SHA', '.' ]
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/eco-lane-378504/github.com/robifirmnsyah/text-to-speech:$SHORT_SHA']
-#   deploy to cloud run in staging
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args: ['run', 'deploy', 'text-to-speech-stg', '--image', 'gcr.io/eco-lane-378504/github.com/robifirmnsyah/text-to-speech:$SHORT_SHA',
